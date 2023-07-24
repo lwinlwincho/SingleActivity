@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -20,7 +21,7 @@ class MainFragment : Fragment() {
 
     private val navController by lazy {
         val navHostFragment =
-            activity?.supportFragmentManager?.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+            childFragmentManager.findFragmentById(R.id.nav_host_fragment_main) as NavHostFragment
         navHostFragment.navController
     }
 
@@ -49,5 +50,28 @@ class MainFragment : Fragment() {
                 return@setOnItemReselectedListener
             }
         }
+
+/*
+        binding.bottomNavView.setOnItemSelectedListener {
+            when(it.itemId){
+                R.id.home -> {
+                    Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_main).navigate(R.id.homeFragmentMain)
+                    true
+                }
+                R.id.live -> {
+                    Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_main).navigate(R.id.liveFragmentMain)
+                    true
+                }
+                R.id.profile -> {
+                    Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_main).navigate(R.id.profileFragmentMain)
+                    true
+                }
+                else -> {
+                    false
+                }
+            }
+        }
+        binding.bottomNavView.selectedItemId = R.id.homeFragmentMain
+*/
     }
 }

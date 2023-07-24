@@ -5,31 +5,18 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/splashFragment">
 
-<!--    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.singleactivity.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/liveFragment"
-        android:name="com.example.singleactivity.LiveFragment"
-        android:label="fragment_live"
-        tools:layout="@layout/fragment_live" />
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.example.singleactivity.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />-->
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.singleactivity.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main">
+
+    </fragment>
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.singleactivity.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
@@ -41,7 +28,7 @@
         android:id="@+id/registerFragment"
         android:name="com.example.singleactivity.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment_to_mainFragment"
             app:destination="@id/mainFragment" />

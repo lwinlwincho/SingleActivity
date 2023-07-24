@@ -40,6 +40,8 @@ android {
 dependencies {
     def nav_version = "2.5.3"
 
+    implementation 'androidx.core:core-splashscreen:1.0.0-beta02'
+
     implementation "androidx.fragment:fragment-ktx:1.5.7"
 
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
